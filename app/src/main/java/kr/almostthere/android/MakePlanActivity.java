@@ -87,7 +87,7 @@ public class MakePlanActivity extends AppCompatActivity {
         mBtShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final ShareDialog dialog = new ShareDialog(mActivity);
+                final ShareDialog dialog = new ShareDialog(mActivity, "");
 
                 dialog.setOnShowListener(new DialogInterface.OnShowListener() {
                     @Override
