@@ -5,7 +5,7 @@
 *.ap_
 
 # private key
-kakao_strings.xml
+app/src/main/res/values/kakao_strings.xml
 
 # Files for ART and Dalvik VM
 *.dex
