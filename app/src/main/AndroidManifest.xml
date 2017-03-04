@@ -13,14 +13,11 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.VIEW"/>
                 <data android:scheme="almostthere" android:host="join" />
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -33,6 +30,7 @@
         </activity>
 
         <activity android:name=".MapsActivity"/>
+        <activity android:name=".MakePlanActivity"/>
 
         <!-- Kakao SDK -->
         <meta-data
@@ -42,7 +40,7 @@
         <!-- Google Map -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBEnz4KWwmUxTuU_QxYEIJ5DQGAw575xNY" />
+            android:value="@string/google_app_id" />
     </application>
 
 </manifest>

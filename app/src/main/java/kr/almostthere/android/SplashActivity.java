@@ -19,8 +19,9 @@ public class SplashActivity extends AppCompatActivity {
         mContext = this;
 
         Intent intent = getIntent();
+
         if (intent == null || intent.getData() == null) {
-            startMainActivity();
+            startMakePlanActivity();
         }else{
             getDeepLinkData();
         }
@@ -39,12 +40,13 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
-    private void startMainActivity() {
+    private void startMakePlanActivity() {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(mContext, MainActivity.class));
+                startActivity(new Intent(mContext, MakePlanActivity.class));
+                finish();
             }
         }, 2000);
     }
