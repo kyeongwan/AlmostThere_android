@@ -28,4 +28,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     compile group: project.KAKAO_SDK_GROUP, name: 'kakaolink', version: project.KAKAO_SDK_VERSION
+    compile 'com.google.android.gms:play-services:8.4.0'
 }
