@@ -4,6 +4,9 @@
 *.apk
 *.ap_
 
+# private key
+kakao_strings.xml
+
 # Files for ART and Dalvik VM
 *.dex
 
