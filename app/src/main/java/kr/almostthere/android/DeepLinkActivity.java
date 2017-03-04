@@ -22,24 +22,24 @@ public class DeepLinkActivity extends AppCompatActivity {
         if (intent == null || intent.getData() == null) {
             finish();
         }
+        Uri uri = intent.getData();
+        String param = uri.getQueryParameter("join");
 
-        openDeepLink(intent.getData());
+        if(param != null){              // Kakao link version
+            Toast.makeText(getApplicationContext(), param, Toast.LENGTH_SHORT).show();
+        }else {                         // General Deep Link version
+            openDeepLink(uri);
+        }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
     }
 
     private void openDeepLink(Uri deepLink) {
         String path = deepLink.getPath();
-
         Toast.makeText(getApplicationContext(), path, Toast.LENGTH_SHORT).show();
-//
-//        if (MYCOLOR_DEEP_LINK.equals(path)) {
-//            // Launch preferences
-//            startActivity(new Intent(this, GetRGBInPhoto.class));
-//        } else if (GOODCOLOR_DEEP_LINK.equals(path)) {
-//            // Launch the inbox activity
-//            startActivity(new Intent(this, GoodColor.class));
-//        } else {
-//            // Fall back to the main activity
-//            startActivity(new Intent(this, MainActivity.class));
-//        }
     }
 }

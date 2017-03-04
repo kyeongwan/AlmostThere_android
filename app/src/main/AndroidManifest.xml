@@ -25,8 +25,15 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:scheme="http" android:host="www.almostthere.kr"/>
                 <data android:scheme="http" android:host="almostthere.kr"/>
+                <data android:scheme="@string/kakao_scheme"
+                    android:host="@string/kakaolink_host" />
             </intent-filter>
         </activity>
+
+        <!-- 카카오톡 관련 -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
     </application>
 
 </manifest>
