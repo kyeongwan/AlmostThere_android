@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -69,6 +70,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 long currentMillis = System.currentTimeMillis();
                 long intervalTime = currentMillis - markerClickTime;
 
+                Log.e("MapsActivity", currentMillis + " / " + markerClickTime);
                 if(intervalTime <= FINISH_INTERVAL_TIME && intervalTime >= 0){
                     Intent intent = new Intent();
                     intent.putExtra("lat", mLatLngDestination.latitude);
@@ -77,10 +79,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     finish();
                     return false;
                 }else {
+                    markerClickTime = currentMillis;
 
                     Toast.makeText(getApplicationContext(), "마커를 한번 더 누르시면 위치가 지정됩니다.", Toast.LENGTH_SHORT).show();
                     return false;
                 }
+
+
             }
         });
     }

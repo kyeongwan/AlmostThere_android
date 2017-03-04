@@ -39,21 +39,28 @@
             android:text="Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bt_register_1"
-            android:layout_weight="1"/>
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bt_register_2"
+            android:id="@+id/bt_register_bus"
             android:layout_weight="1" />
 
         <Button
             android:text="Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bt_register_3"
+            android:id="@+id/bt_register_car"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_register_walk"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_register_bicycle"
             android:layout_weight="1" />
     </LinearLayout>
 

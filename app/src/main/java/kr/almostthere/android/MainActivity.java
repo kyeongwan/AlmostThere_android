@@ -52,13 +52,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                try {
-                    Intent i = new Intent();
-                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    kakaoLink.sendMessage(kakaoTalkLinkMessageBuilder, activity);
-                } catch (KakaoParameterException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    Intent i = new Intent();
+//                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    kakaoLink.sendMessage(kakaoTalkLinkMessageBuilder, activity);
+//                } catch (KakaoParameterException e) {
+//                    e.printStackTrace();
+//                }
+
+                startActivity(new Intent(activity, MapsActivity.class));
             }
         });
     }
